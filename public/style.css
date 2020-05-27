@@ -85,6 +85,7 @@ header {
 }
 .card {
     width: 300px;
+    cursor: pointer;
 }
 .card-img img{
     width: 300px;
@@ -95,12 +96,12 @@ header {
 .card-content h2 {
     font-size: 18px;
     line-height: 21px;
-    color: #111111;
+    color: #111;
     font-weight: normal;
 }
 .card-content p {
     font-size: 14px;
-    color: #777777;
+    color: #777;
     line-height: 16px;
 }
 
@@ -122,5 +123,58 @@ footer p {
 .about p {
     font-size: 18px;
     line-height: 28px;
-    color: #444444;
+    color: #444;
+}
+
+/* MODAL */
+.modal-base {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+.modal {
+    background-color: white;
+    width: 660px;
+    height: auto;
+    margin: 25vh auto;
+    text-align: center;
+    position: relative;
+    border-radius: 16px;
+}
+.modal .close-modal {
+    color: black;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+}
+.modal .close-modal:hover {
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+}
+.modal img {
+    width: 600px;
+    height: 200px;
+    border-radius: 16px;
+    margin-top: 32px;
+}
+.modal_card-content h2 {
+    font-size: 24px;
+    line-height: 28px;
+    color: #111;
+}
+.modal_card-content p {
+    font-size: 18px;
+    line-height: 21px;
+    color: #777;
+    padding-bottom: 32px;
+}
+
+/* MODAL.ACTIVE */
+.modal-base.active {
+    opacity: 1;
+    visibility: visible;
 }
