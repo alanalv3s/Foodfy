@@ -79,7 +79,7 @@ header {
     background: #f9f9f9;
     position: absolute;
 
-    animation: spinUp 4s forwards;
+    animation: spinUp 3s forwards;
 }
 
 @keyframes spinUp {
@@ -313,7 +313,7 @@ footer p {
 }
 .featured {
     background-color: #FBDFDB;
-    color: rgb(213, 80, 68);
+    color: #d55044;
     font-size: 12px;
     padding: 2px 8px;
     position: absolute;

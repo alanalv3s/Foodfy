@@ -1,0 +1,19 @@
+{
+  "name": "Foodfy",
+  "version": "1.0.0",
+  "description": "As melhores receitas na palma da sua mão.",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "repository": "git@github.com:alanalv3s/Foodfy.git",
+  "author": "alanams97 <alan_ams97@gmail.com>",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
