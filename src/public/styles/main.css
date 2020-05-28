@@ -56,7 +56,7 @@ a {
 .title,
 .subtitle { 
     color: var(--dark);
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
 }
 
 .font-xs { 
@@ -146,7 +146,7 @@ a {
 /* === Receitas e Cards === */
 
 .recipes { 
-    padding: 50px 0;
+    padding: 30px 0 50px;
 }
 
 .recipes__title { 
@@ -197,8 +197,8 @@ a.card {
     cursor: pointer;
 }
 
-.card:hover .card__title--underline { 
-    text-decoration: underline;
+.card:hover .card__img { 
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5);
 }
 
 @media screen and (min-width: 1000px) { 
