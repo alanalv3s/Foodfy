@@ -23,7 +23,7 @@ routes.get('/recipes/:recipe_index', (req, res) => {
     const { recipe_index } = req.params  
     const recipe = recipes[recipe_index]
 
-    res.render('recipe', { recipe })
+    res.render('public/recipes/show', { recipe })
 })
 routes.get('/about', (_, res) => res.render('public/about'))
 
