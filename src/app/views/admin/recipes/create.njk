@@ -1,0 +1,27 @@
+{% extends "admin/layout.njk" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/styles/recipe.css">
+    <title>Foodfy Admin | Criar receita</title>
+{% endblock head %}
+
+{% block content %}
+    <form class="recipes recipes--admin container" action="/admin/recipes" method="POST">
+        <!-- Prevent enter from trigger the event -->
+        <button type="submit" onclick="return false;" style="display:none;"></button>
+
+        <div class="row">
+            <h1 class="title font-md">Criar receita</h1>
+            <div class="actions-container">
+                <button class="button">Salvar receita</button>
+            </div>
+        </div>
+        <section class="recipe__form container">
+            {% include "includes/recipes/fields.njk" %}
+        </section>
+    </form>
+{% endblock content %}
+
+{% block scripts %}
+    <script src="/scripts.js"></script>
+{% endblock %}

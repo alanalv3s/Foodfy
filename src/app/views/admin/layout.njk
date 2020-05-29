@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Aprenda a cozinhar os melhores pratos
+    com receitas criadas por profissionais
+    do mundo inteiro.">
+        <meta name="keywords" content="Receitas, chef, comidas">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+        <link rel="manifest" href="assets/favicon/site.webmanifest">
+        <link rel="stylesheet" href="/styles/main.css">
+        <link rel="stylesheet" href="/styles/admin.css">
+        {% block head %}
+            <title>Foodfy | Receitas</title>
+        {% endblock %}
+    </head>
+    <body>
+        <header class="header header--admin">
+            <div class="container">
+                <a href="/admin/recipes" class="header__link">
+                    <h1 class="header__title">Foodfy</h1>
+                </a>
+            </div>
+        </header>
+
+        {% block content %}
+        {% endblock %}
+
+        {% block scripts %}
+        {% endblock %}
+        
+    </body>
+</html>

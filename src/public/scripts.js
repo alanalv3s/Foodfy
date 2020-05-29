@@ -11,3 +11,4 @@ function handleShow(target, buttonSelector) {
     button.innerHTML = "Esconder";
   }
 }
+
