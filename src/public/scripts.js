@@ -26,13 +26,13 @@ function appendField(fieldSelector, parentSelector) {
 
     // Reset the value from the cloned node 
     newField.value = ""
-
+    
     // Appending the field to his parent
     parentContainer.appendChild(newField)
 
     // Adding autofocus on the new field
     newField.focus()
-
+    
     // Passing the listener for the new field
     appendFieldInputListener(fieldSelector, parentSelector)
 }
