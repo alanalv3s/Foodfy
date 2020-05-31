@@ -1,35 +1,47 @@
 <div class="field-container">
     <label class="label" for="image">Imagem da receita</label>
-    <input type="url" name="image" id="image" class="field" value="{{recipe.image}}">
+    <input type="url" name="image" id="image" class="field" value="{{recipe.image}}" placeholder="Insira aqui a URL da imagem">
 </div>
 
 <div class="field-container">
     <label class="label" for="title">Título da receita</label>
-    <input type="text" name="title" id="title" class="field" value="{{recipe.title}}">
+    <input type="text" name="title" id="title" class="field" value="{{recipe.title}}" placeholder="Insira o nome da receita">
 </div>
 
 <div class="field-container">
     <label class="label" for="author">Autor da receita</label>
-    <input type="text" name="author" id="author" class="field" value="{{recipe.author}}">
+    <input type="text" name="author" id="author" class="field" value="{{recipe.author}}" placeholder="Insira quem criou a receita">
 </div>
 
 <div class="field-container">
     <div id="ingredients">
         <label class="label" for="ingredients">Ingredientes</label>
-        <input type="text" class="field" name="ingredients[]">
+        {% if recipe.ingredients %}
+            {% for ingredient in recipe.ingredients %}
+                <input type="text" class="field" name="ingredients[]" value="{{ingredient}}">
+            {% endfor %}
+        {% else %}
+            <input type="text" class="field" name="ingredients[]" placeholder="Insira um novo ingrediente">
+        {% endif %}
     </div>
     <button class="field-container__action" type="button">Adicionar novo ingrediente</button>
 </div>
 
-<div class="field-container"> 
+<div class="field-container">
     <div id="preparations">
         <label class="label" for="preparations">Modo de preparo</label>
-        <input type="text" class="field" name="preparations[]"/>
-     </div>
+        {% if recipe.preparations %}
+            {% for preparation in recipe.preparations %}
+                <input type="text" class="field" name="preparations[]" value="{{preparation}}"/>
+            {% endfor %}
+        {%else%}
+            <input type="text" class="field" name="preparations[]" placeholder="Insira um novo passo"/>
+        {% endif %}
+    </div>
     <button class="field-container__action" type="button">Adicionar novo passo</button>
 </div>
 
 <div class="field-container">
     <label class="label" for="information">Informações adicionais</label>
-    <textarea name="information" id="information" class="field" rows="10"></textarea>
+    <textarea name="information" id="information" class="field" rows="10" placeholder="Insira aqui todas as informações que gostaria de compartilhar, como por exemplo como ela foi criada, qual a história por trás dela, etc">{{recipe.information}}</textarea>
 </div>

@@ -9,8 +9,8 @@ const RecipesController = require('./app/controllers/RecipesController')
 routes.get('/admin', (req,res) => res.redirect(301, '/admin/recipes'))
 routes.get('/admin/recipes', RecipesController.index);
 routes.get('/admin/recipes/create', RecipesController.create);
-// routes.get('/admin/recipes/:id', RecipesController.show);
-// routes.get('/admin/recipes/:id/edit', RecipesController.edit);
+routes.get('/admin/recipes/:id', RecipesController.show);
+routes.get('/admin/recipes/:id/edit', RecipesController.edit);
 
 // routes.post('/admin/recipes', RecipesController.post)
 // routes.put('/admin/recipes', RecipesController.put)
